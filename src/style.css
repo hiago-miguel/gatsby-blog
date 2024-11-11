@@ -281,7 +281,7 @@ a:focus {
   font-weight: var(--fontWeight-bold);
   font-family: var(--font-heading);
   text-decoration: none;
-  font-size: var(--fontSize-2);
+  font-size: var(--fontSize-7);
 }
 
 .bio {
@@ -328,4 +328,17 @@ a:focus {
   ol {
     list-style-position: inside;
   }
+}
+
+/* CSS Nav links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+.nav-link-item {
+  padding-right: 2rem;
+}
+.nav-link-text {
+  color: rgb(0, 0, 0);
 }
