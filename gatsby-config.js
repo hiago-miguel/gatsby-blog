@@ -9,15 +9,15 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Hiago's Journey`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Hiago Rodrigues`,
+      summary: `You can check my journey as a DevOps Engineer in this blog. I live in Natal (Brazil) and I work at Cloud++, a Netherlands Company.`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
     social: {
-      twitter: `kylemathews`,
+      linkedin: `https://www.linkedin.com/in/hiago-miguel-44a627102/`,
     },
   },
   plugins: [
