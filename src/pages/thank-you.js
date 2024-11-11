@@ -9,7 +9,7 @@ const ThankYouPage = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <p>Thank you for your submission!</p>z
+      <p>Thank you for your submission!</p>
       <hr />
       <Bio />
     </Layout>
