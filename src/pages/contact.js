@@ -12,8 +12,11 @@ const ContactPage = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-   
-      <ContactForm />
+      
+      <ContactForm>
+        <p>Feel free to ask me anything!</p>
+        <br />
+      </ContactForm>
       <br />
       <hr />
       <footer>

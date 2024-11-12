@@ -1,7 +1,7 @@
 // src/components/ContactForm.js
 import React, { useState } from "react"
 
-const ContactForm = () => {
+const ContactForm = ({ children }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -46,56 +46,59 @@ const ContactForm = () => {
   }
 
   return (
-    <form
-      id="contact-form"
-      name="contact"
-      method="POST"
-      data-netlify="true"
-      action="/thank-you"
-      onSubmit={handleSubmit}
-    >
-      <input type="hidden" name="form-name" value="contact" />
+    <article>
+      {children}
+      <form
+        id="contact-form"
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        action="/thank-you"
+        onSubmit={handleSubmit}
+      >
+        <input type="hidden" name="form-name" value="contact" />
 
-      <div>
-        <label htmlFor="name">Name:</label>
-        <input
-          type="text"
-          name="name"
-          id="name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
-        {errors.name && <p className="error">{errors.name}</p>}
-      </div>
+        <div>
+          <label htmlFor="name">Name:</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+          {errors.name && <p className="error">{errors.name}</p>}
+        </div>
 
-      <div>
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-        {errors.email && <p className="error">{errors.email}</p>}
-      </div>
+        <div>
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+          {errors.email && <p className="error">{errors.email}</p>}
+        </div>
 
-      <div>
-        <label htmlFor="description">Description:</label>
-        <textarea
-          name="description"
-          id="description"
-          value={formData.description}
-          onChange={handleChange}
-          required
-        ></textarea>
-        {errors.description && <p className="error">{errors.description}</p>}
-      </div>
+        <div>
+          <label htmlFor="description">Description:</label>
+          <textarea
+            name="description"
+            id="description"
+            value={formData.description}
+            onChange={handleChange}
+            required
+          ></textarea>
+          {errors.description && <p className="error">{errors.description}</p>}
+        </div>
 
-      <button type="submit">Send</button>
-    </form>
+        <button type="submit">Send</button>
+      </form>
+    </article>
   )
 }
 
