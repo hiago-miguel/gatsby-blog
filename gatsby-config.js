@@ -9,7 +9,7 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Hiago's Journey`,
+    title: `Tech Coffee ☕`,
     author: {
       name: `Hiago Rodrigues`,
       summary: `You can check my journey as a DevOps Engineer in this blog. I live in Natal (Brazil) and I work at Cloud++, a Netherlands Company.`,
