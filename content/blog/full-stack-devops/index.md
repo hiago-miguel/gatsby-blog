@@ -1,8 +1,12 @@
 ---
 title: "Why Full-Stack Skills Matter for DevOps Engineers 🌐💻"
 date: "2024-11-01"
+featuredImage: "./devops.png"
 ---
 ##
+
+![](../images/mountains.jpg)
+
 So, you’re a DevOps Engineer. You’re setting up infrastructure, monitoring systems, optimizing CI/CD pipelines… But what if you added some full-stack development skills to the mix? It might sound surprising, but having front-end and back-end knowledge can seriously level up your DevOps game. 
 
 ---

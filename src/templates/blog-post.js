@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -10,6 +11,7 @@ const BlogPostTemplate = ({
   location,
 }) => {
   const siteTitle = site.siteMetadata?.title || `Title`
+  const image = post.frontmatter.featuredImage ? getImage(post.frontmatter.featuredImage) : null
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -22,6 +24,9 @@ const BlogPostTemplate = ({
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
         </header>
+        {/* <GatsbyImage image={image} alt="Featured Image" /> */}
+        {/* Conditionally render the featured image */}
+        {image && <GatsbyImage image={image} alt="Featured Image" />} 
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
@@ -91,6 +96,11 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        featuredImage {
+          childImageSharp {
+            gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED, width: 800)
+          }
+        }
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
